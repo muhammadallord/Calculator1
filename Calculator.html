@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <!-- code css -->
+    <link rel="stylesheet" href="Style_Calculat.css" />
+  </head>
+  <!-- code HTML -->
+
+  <body>
+    <div class="container" id="calculator">
+      <div class="container">
+        <form>
+          <div class="display">
+            <input onkeydown="return checkPhoneKey(event.key)" placeholder="0" id="display" />
+          </div>
+          <div>
+            <input
+              type="button"
+              value="AC"
+              onclick="clearDisplay('AC')"
+              class="operator"
+            />
+            <!-- onclick To delete all cells-->
+            <input
+              type="button"
+              value="DE"
+              onclick="del('DE')"
+              class="operator"
+            />
+            <!-- onclick To delete one cells-->
+            <input
+              type="button"
+              value="."
+              onclick="appendToDisplay('.')"
+              class="operator"
+            />
+            <input
+              type="button"
+              value="/"
+              onclick="appendToDisplay('/')"
+              class="operator"
+            />
+          </div>
+          <div>
+            <input type="button" value="7" onclick="appendToDisplay('7')" />
+            <input type="button" value="8" onclick="appendToDisplay('8')" />
+            <input type="button" value="9" onclick="appendToDisplay('9')" />
+            <input
+              type="button"
+              value="*"
+              onclick="appendToDisplay('*')"
+              class="operator"
+            />
+          </div>
+          <div>
+            <input type="button" value="4" onclick="appendToDisplay('4')" />
+            <input type="button" value="5" onclick="appendToDisplay('5')" />
+            <input type="button" value="6" onclick="appendToDisplay('6')" />
+            <input
+              type="button"
+              value="-"
+              onclick="appendToDisplay('-')"
+              class="operator"
+            />
+          </div>
+          <div>
+            <input type="button" value="1" onclick="appendToDisplay('1')" />
+            <input type="button" value="2" onclick="appendToDisplay('2')" />
+            <input type="button" value="3" onclick="appendToDisplay('3')" />
+            <input
+              type="button"
+              value="+"
+              onclick="appendToDisplay('+')"
+              class="operator"
+            />
+          </div>
+          <div>
+            <input type="button" value="00" onclick="appendToDisplay('00')" />
+            <input type="button" value="0" onclick="appendToDisplay('0')" />
+            <input
+              type="button"
+              value="="
+              onclick="calculate('=')"
+              class="equal op2"
+            />
+            <!-- eval for calculations-->
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="JS_calculator.js"></script>
+  </body>
+</html>
